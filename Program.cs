@@ -17,7 +17,10 @@ namespace Lab10
             return Math.PI * 2.0 * radius;
         }
         public string CalculateFormattedCircumference(){return "";}
-        public double CalculateArea(){return 0;}
+        public double CalculateArea()
+        {
+            return Math.PI * radius * radius;
+        }
         public string CalculateFormattedArea(){return "";}
         private string FormatNumber(double x){return "";}
         //Propertys
