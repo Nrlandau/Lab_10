@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace Lab10
 {
@@ -84,13 +85,19 @@ namespace Lab10
         }
         static bool isContinue()
         {
+            string con;
             while(true)
             {
             System.Console.WriteLine("Do you want to enter another Circle");
-    
+            con = System.Console.ReadLine();
+            if(Regex.IsMatch(con,@"^[nNyY]"))
+            {
+                if(Regex.IsMatch(con,@"^[nN]"))
+                    return false;
+                return true;
+            }
             }
 
-            return false;
         }
         static void Main(string[] args)
         {
