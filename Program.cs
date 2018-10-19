@@ -61,6 +61,27 @@ namespace Lab10
     }
     class Program
     {
+        static Circle getInput()
+        {
+            Circle cir;
+            while (true)
+            {
+                try
+                {
+                    System.Console.WriteLine("Input a radius for a circle:");
+                    cir = new Circle(double.Parse(System.Console.ReadLine()));
+                    return cir;
+                }
+                catch(ArgumentOutOfRangeException ex)
+                {
+                    System.Console.WriteLine(ex.Message);
+                }
+                catch(FormatException)
+                {
+                    System.Console.WriteLine("That is not a number");
+                }
+            }
+        }
         static void Main(string[] args)
         {
             
