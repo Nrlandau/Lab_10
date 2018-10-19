@@ -28,8 +28,11 @@ namespace Lab10
         {
             return FormatNumber(CalculateArea());
         }
-        private string FormatNumber(double x){return "";}
-        //Propertys
+        private string FormatNumber(double x)
+        {
+            return Math.Round(x,2).ToString();
+        }
+        //Properties
         public double Radius
         {
             get{return radius;}
