@@ -6,12 +6,14 @@ namespace Lab10
     {
         //vars
         double radius;
+        static int numCircles = 0 ;
         //constructer
         public Circle(double r)
         {
             if(r < 0)
                 throw new ArgumentOutOfRangeException("The radius of a circle must be nonnegitive");
             radius = r;
+            numCircles++;
         }
         //methods
         public double CalculateCircumference()
