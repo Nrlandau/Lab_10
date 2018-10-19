@@ -50,13 +50,20 @@ namespace Lab10
                 radius = value;
             }
         }
+        public static int NumCircles
+        {
+            get
+            {
+                return numCircles;
+            }
+        }
 
     }
     class Program
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }
