@@ -37,8 +37,16 @@ namespace Lab10
         //Properties
         public double Radius
         {
-            get{return radius;}
-            set{radius = value;}
+            get
+            {
+                return radius;
+            }
+            set
+            {
+                if(value < 0)
+                    throw new ArgumentOutOfRangeException("The radius of a circle must be nonnegitive");
+                radius = value;
+            }
         }
 
     }
