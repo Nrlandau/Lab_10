@@ -82,9 +82,26 @@ namespace Lab10
                 }
             }
         }
+        static bool isContinue()
+        {
+            while(true)
+            {
+            System.Console.WriteLine("Do you want to enter another Circle");
+    
+            }
+
+            return false;
+        }
         static void Main(string[] args)
         {
-            
+            Circle circle;
+            while (true)
+            {
+                circle = getInput();
+                System.Console.WriteLine("Circumference: {0}\n Area:           {1}",circle.CalculateFormattedCircumference(),circle.CalculateFormattedArea());
+                if(!isContinue())
+                    break;
+            }
         }
     }
 }
