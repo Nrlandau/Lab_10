@@ -105,10 +105,11 @@ namespace Lab10
             while (true)
             {
                 circle = getInput();
-                System.Console.WriteLine("Circumference: {0}\n Area:           {1}",circle.CalculateFormattedCircumference(),circle.CalculateFormattedArea());
+                System.Console.WriteLine("Circumference: {0}\nArea:           {1}",circle.CalculateFormattedCircumference(),circle.CalculateFormattedArea());
                 if(!isContinue())
                     break;
             }
+            System.Console.WriteLine("You made {0} circles",Circle.NumCircles);
         }
     }
 }
