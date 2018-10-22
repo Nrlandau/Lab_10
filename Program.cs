@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Lab 10 by Nicholas Landau
+using System;
 using System.Text.RegularExpressions;
 
 namespace Lab10
@@ -7,7 +8,7 @@ namespace Lab10
     {
         //vars
         double radius;
-        static int numCircles = 0 ;
+        static int numCircles = 0;
         //constructer
         public Circle(double r)
         {
@@ -17,7 +18,7 @@ namespace Lab10
             numCircles++;
         }
         //methods
-        public double CalculateCircumference()
+        public double CalculateCircumference() //2PIr
         {
             return Math.PI * 2.0 * radius;
         }
@@ -25,7 +26,7 @@ namespace Lab10
         {
             return FormatNumber(CalculateCircumference());
         }
-        public double CalculateArea()
+        public double CalculateArea() //PIr^2
         {
             return Math.PI * radius * radius;
         }
@@ -51,7 +52,7 @@ namespace Lab10
                 radius = value;
             }
         }
-        public static int NumCircles
+        public static int NumCircles 
         {
             get
             {
@@ -73,7 +74,7 @@ namespace Lab10
                     cir = new Circle(double.Parse(System.Console.ReadLine()));
                     return cir;
                 }
-                catch(ArgumentOutOfRangeException ex)
+                catch(ArgumentOutOfRangeException ex) //negitive input
                 {
                     System.Console.WriteLine(ex.Message);
                 }
@@ -83,7 +84,7 @@ namespace Lab10
                 }
             }
         }
-        static bool isContinue()
+        static bool isContinue() 
         {
             string con;
             while(true)
@@ -99,7 +100,7 @@ namespace Lab10
             }
 
         }
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
             Circle circle;
             while (true)
