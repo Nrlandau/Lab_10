@@ -88,17 +88,16 @@ namespace Lab10
         {
             string con;
             while(true)
-            {
-            System.Console.WriteLine("Do you want to enter another Circle");
-            con = System.Console.ReadLine();
-            if(Regex.IsMatch(con,@"^[nNyY]"))
-            {
-                if(Regex.IsMatch(con,@"^[nN]"))
-                    return false;
-                return true;
+                {
+                System.Console.WriteLine("Do you want to enter another Circle");
+                con = System.Console.ReadLine();
+                if(Regex.IsMatch(con,@"^[nNyY]"))
+                {
+                    if(Regex.IsMatch(con,@"^[nN]"))
+                        return false;
+                    return true;
+                }
             }
-            }
-
         }
         static void Main(string[] args) 
         {
